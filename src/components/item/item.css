@@ -1,0 +1,14 @@
+.card{
+    background-color: hotpink;
+    height: 35rem;
+}
+.cardDescription{
+    height: 120px;
+}
+.cardButton{
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(101, 43, 72);
+    color: white;
+    padding: 1rem;
+}
