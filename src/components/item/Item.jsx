@@ -2,8 +2,17 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/esm/Button';
 import "./item.css"
+import { useNavigate } from 'react-router-dom';
 
-const Item = ({ id, image, name, category, description, price, stock, onShowDetails }) => {
+const Item = ({ id, image, name, category, description, price, stock }) => {
+
+    const navigate = useNavigate()
+
+    const onShowDetails = (id) => {
+        navigate(`/products/${id}`)
+    }
+
+
     return (
         <Col>
             <Card style={{ width: '18rem' }} key={id} className='card'>

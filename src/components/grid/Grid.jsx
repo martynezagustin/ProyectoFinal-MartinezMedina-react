@@ -9,7 +9,7 @@ function Columns({productos}) {
     <Container>
       <Row className='row'>
         {productos.map((producto) => (
-            <Item producto={producto} key={producto.id}/>
+            <Item producto={producto} key={producto.id} />
         ))}
       </Row>
     </Container>
