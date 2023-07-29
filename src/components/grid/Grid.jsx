@@ -9,7 +9,8 @@ function Columns({productos}) {
     <Container>
       <Row className='row'>
         {productos.map((producto) => (
-            <Item producto={producto} key={producto.id} />
+          //producto en spread pasa las propiedades individualmente
+            <Item {...producto} key={producto.id} />
         ))}
       </Row>
     </Container>

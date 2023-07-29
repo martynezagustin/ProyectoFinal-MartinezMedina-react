@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/esm/Button';
 import "./item.css"
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Item = ({ id, image, name, category, description, price, stock }) => {
-
     const navigate = useNavigate()
 
     const onShowDetails = (id) => {
@@ -18,7 +18,7 @@ const Item = ({ id, image, name, category, description, price, stock }) => {
             <Card style={{ width: '18rem' }} key={id} className='card'>
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title>{name.toUpperCase()}</Card.Title>
                     <Card.Text className='cardDescription'>{description}
                     </Card.Text>
                     <Card.Text>{category}</Card.Text>

@@ -1,9 +1,9 @@
 .card{
-    background-color: hotpink;
-    height: 35rem;
+    background-color: hotpink!important;
+    height: 35rem!important;
 }
 .cardDescription{
-    height: 120px;
+    height: 120px!important;
 }
 .cardButton{
     border-radius: 4px;
