@@ -1,10 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Item from '../item/Item';
-import "./grid.css"
+import "./itemList.css"
 
-function Columns({productos}) {
+function ItemList({productos}) {
   return (
     <Container>
       <Row className='row'>
@@ -17,4 +16,4 @@ function Columns({productos}) {
   );
 }
 
-export default Columns;
+export default ItemList;
