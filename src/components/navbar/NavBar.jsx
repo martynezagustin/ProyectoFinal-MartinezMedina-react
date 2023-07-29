@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 function NavBar() {
 
   const navigate = useNavigate()
+  const categoriesData = products.map((prod) => prod.category)
+  const categories = [...new Set(categoriesData)]
 
   return (
     <Navbar expand="lg" className="navbar">
@@ -19,15 +21,7 @@ function NavBar() {
             <Nav.Link href="#home">Inicio</Nav.Link>
             <Nav.Link href="#link">Acerca de</Nav.Link>
             <NavDropdown title="Categorías" id="categories">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              {categories.map((category) => <Nav.Link as={Link}></Nav.Link>)}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
