@@ -2,7 +2,7 @@ import NavBar from './components/navbar/NavBar'
 import "./style.css"
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import ItemListContainer from "./components/itemListContainer/ItemListContainer"
-import ProductDetail from './pages/product-detail/product-detail';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -11,10 +11,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
+        <NavBar onFilter/>
         <Routes>
           <Route path='/' element={<ItemListContainer />}></Route>
-          <Route path='/products/:productId' element={<ProductDetail />}/>  
+          <Route path='/products/:productId' element={<ItemDetailContainer />}/>  
+          <Route path='/category/:categoryId' element={<ItemListContainer />}/>  
         </Routes>
       </BrowserRouter>
     </>

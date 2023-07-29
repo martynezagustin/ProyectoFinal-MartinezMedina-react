@@ -1,0 +1,9 @@
+.detailProductBack {
+    background-color: deeppink;
+    margin: 10px;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1.3em;
+    color: white;
+    border: none;
+}

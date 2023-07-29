@@ -1,9 +1,14 @@
 .card{
     background-color: hotpink!important;
-    height: 35rem!important;
+    height: 600px!important;
+}
+.card-body{
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: center!important;
 }
 .cardDescription{
-    height: 120px!important;
+    height: 110px!important;
 }
 .cardButton{
     border-radius: 4px;

@@ -17,7 +17,7 @@ const Item = ({ id, image, name, category, description, price, stock }) => {
         <Col>
             <Card style={{ width: '18rem' }} key={id} className='card'>
                 <Card.Img variant="top" src={image} />
-                <Card.Body>
+                <Card.Body className='cardBody'>
                     <Card.Title>{name.toUpperCase()}</Card.Title>
                     <Card.Text className='cardDescription'>{description}
                     </Card.Text>

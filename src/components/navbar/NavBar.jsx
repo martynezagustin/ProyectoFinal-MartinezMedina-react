@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch/useFetch';
 import { API_URLS } from '../../constants';
 
-function NavBar() {
+function NavBar(props) {
 
   const { data: products } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config)
   const navigate = useNavigate()
