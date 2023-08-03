@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { FirebaseApp } from "firebase/app";
 import firebase from "firebase/app"
 
 const ContactForm = () => {
@@ -11,7 +10,12 @@ const ContactForm = () => {
         e.preventDefault()
     
         const db = firebase.firestore()
-        db.collection("contactMesagges")
+        db.collection("orders").add({
+            name,
+            email,
+            message,
+            time
+        })
     }
     
 
