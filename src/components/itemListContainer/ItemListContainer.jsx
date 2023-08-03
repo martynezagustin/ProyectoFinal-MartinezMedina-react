@@ -7,6 +7,7 @@ import ItemList from "../itemList/ItemList"
 
 function ItemListContainer() {
     const { categoryId } = useParams()
+    const [cart, setCart] = useState([])
     const { data: products } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config)
 
     if (categoryId) {

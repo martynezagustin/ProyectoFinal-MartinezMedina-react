@@ -21,7 +21,7 @@ function NavBar(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Nav.Link as={Link} to={`/cart`}>Carrito</Nav.Link>
             <Nav.Link href="#link">Acerca de</Nav.Link>
             <NavDropdown title="Categorías" id="categories">
               {categories.map((category) => <Nav.Link as={Link} key={category} to={`/category/${category}`}>{category}</Nav.Link>)}

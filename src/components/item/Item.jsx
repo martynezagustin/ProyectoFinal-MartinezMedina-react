@@ -5,7 +5,7 @@ import "./item.css"
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-const Item = ({ id, image, name, category, description, price, stock }) => {
+const Item = ({ id, image, name, category, description, price }) => {
     const navigate = useNavigate()
 
     const onShowDetails = (id) => {

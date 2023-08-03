@@ -1,5 +1,8 @@
 .detailProduct{
-    margin: 1rem;
+    margin: 1.3rem;
+    background-color: rgb(255, 186, 220);
+    border-radius: 10px;
+    padding: 12px;
 }
 .detailProductImg{
     border-radius: 1rem;
