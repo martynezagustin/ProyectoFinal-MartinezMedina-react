@@ -27,6 +27,7 @@ const Cart = () => {
           <th>Category</th>
           <th>Description</th>
           <th>Price</th>
+          <th>Quantity</th>
         </tr>
       </thead>
       <tbody>
@@ -36,12 +37,14 @@ const Cart = () => {
             <td>{item.category}</td>
             <td>{item.description}</td>
             <td>{item.price}</td>
+            <td>{item.quantity}</td>
             <td>
               <button onClick={() => removeItem(item.id)}>Remover elemento</button>
             </td>
           </tr>
         ))}
-      <Link to={`/checkout`}><button>Finalizar compra</button></Link>
+        <button onClick={() => clear()}>Vaciar carrito</button>
+      <Link to={`/checkout`} className="btnFinishPurchase"><button>Finalizar compra</button></Link>
       </tbody>
     </Table>
   );

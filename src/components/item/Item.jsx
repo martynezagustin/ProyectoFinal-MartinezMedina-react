@@ -22,7 +22,7 @@ const Item = ({ id, image, name, category, description, price }) => {
                     <Card.Text className='cardDescription'>{description}
                     </Card.Text>
                     <Card.Text>{category}</Card.Text>
-                    <Card.Text>U$D {price}</Card.Text>
+                    <Card.Text>U$D {parseInt(price)}</Card.Text>
                     <button variant="primary" className='cardButton' onClick={() => onShowDetails(id)} type="button">View product</button>
                 </Card.Body>
             </Card>

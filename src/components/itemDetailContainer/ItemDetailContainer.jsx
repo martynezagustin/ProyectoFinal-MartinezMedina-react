@@ -3,17 +3,15 @@ import { useFetch } from "../../hooks/useFetch/useFetch";
 import ItemDetail from "../../components/itemDetail/ItemDetail";
 import './itemDetailContainer.css'
 import { API_URLS } from "../../constants";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../services";
 
 function ItemDetailContainer(){
     const { productId } = useParams()
-    const urlProductDetail = `${API_URLS.PRODUCTS.url}/${productId}`
-    const navigate = useNavigate()
+    const [productDetail, setProductDetail] = useState({})
     const history = window.history
-    
-    const { data } = useFetch(urlProductDetail, API_URLS.PRODUCTS.config)
+    const navigate = useNavigate()
 
     useEffect(() => {
         //Le decimos nuestra database
@@ -37,7 +35,7 @@ function ItemDetailContainer(){
             <div className="headerContainer">
                 {history.length > 2 ? <button onClick={() => navigate(-1)} className="detailProductBack">&larr; Back</button> : null }
             </div>
-            <ItemDetail item={data} />
+            <ItemDetail item={productDetail} />
         </>
     )
 }
