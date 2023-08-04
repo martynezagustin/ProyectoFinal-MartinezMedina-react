@@ -6,11 +6,6 @@ import Table from 'react-bootstrap/Table';
 
 const Cart = () => {
   const { cart, cartTotal, clear, removeItem, sumTotal } = useContext(CartContext)
-  const {navigate} = useNavigate()
-
-  const onHandlerCheckout = () => {
-    navigate("/checkout")
-  }
 
   if (sumTotal() === 0) {
     return (
@@ -46,7 +41,7 @@ const Cart = () => {
             </td>
           </tr>
         ))}
-      <button onClick={() => onHandlerCheckout()}>Finalizar compra</button>
+      <Link to={`/checkout`}><button>Finalizar compra</button></Link>
       </tbody>
     </Table>
   );

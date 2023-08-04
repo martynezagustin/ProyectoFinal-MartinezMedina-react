@@ -10,8 +10,6 @@ import { getDocs } from "firebase/firestore"
 
 
 function ItemListContainer() {
-    const [cart, setCart] = useState([])
-    const { data: products } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config)
     const [productList, setProductList] = useState([])
     const { categoryId } = useParams()
     const [loading, setLoading] = useState(false)
@@ -36,28 +34,14 @@ function ItemListContainer() {
         .finally(setLoading(false))
     }, [categoryId])
 
-    if (categoryId) {
-        const productByCategory = products.filter((product) => product.category === categoryId)
-
         return (
             <>
                 <h1>Tienda de Beats de Trap, Drill, RKT.</h1>
                 <h2>Urban Diamond Beats</h2>
                 <div className="divProducts">
-                    <ItemList productos={productByCategory} />
+                    {loading ? <p>Cargando...</p> : <ItemList productos={productList} />}
                 </div>
             </>
         )
-    } else {
-        return (
-            <>
-                <h1>Tienda de Beats de Trap, Drill, RKT.</h1>
-                <h2>Urban Diamond Beats</h2>
-                <div className="divProducts">
-                    <ItemList productos={productList} />
-                </div>
-            </>
-        )
-    }
-}
+    } 
 export default ItemListContainer
