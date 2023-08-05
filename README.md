@@ -1,5 +1,5 @@
 ## Urban Diamond Beats
-Bienvenido a Urban Diamond Beats, el sitio web para tus ritmos musicales favoritos. Aquí podrás encontrar una amplia selección de beats en los géneros de RKT, Trap y Drill, todo con un toque distintivo de color rosa.
+Bienvenido a Urban Diamond Beats, el sitio web que será destinado para tus ritmos musicales favoritos. Aquí podrás encontrar una amplia selección de beats en los géneros de RKT, Trap y Drill, todo con un toque distintivo de color rosa.
 
 ## Tecnologías Utilizadas
 React
@@ -9,7 +9,7 @@ HTML
 Bootstrap
 Firebase
 ## Características
-Amplia selección de beats en los géneros RKT, Trap y Drill.
+E-commerce preparado para selección de beats en los géneros RKT, Trap y Drill.
 Experiencia de usuario intuitiva y atractiva con un diseño moderno y llamativo en color rosa.
 Reproductor de audio integrado para escuchar y previsualizar los beats antes de adquirirlos.
 Categorización de los beats por género para una navegación sencilla.
