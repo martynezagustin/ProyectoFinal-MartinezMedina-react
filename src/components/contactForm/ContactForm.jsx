@@ -19,27 +19,29 @@ const ContactForm = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
 
-        if(email !== validateEmail){
-            alert("Mails are not equals")
-        } else {
-            try {
+        if (email !== validateEmail) {
+            alert("Los correos electrónicos no coinciden");
+          } else {
+            // Verifica si los campos requeridos están llenos
+            if (!name || !surname || !email || !validateEmail || !document || !address) {
+              alert("Por favor, completa todos los campos obligatorios");
+            } else {
+              try {
                 let order = {
-                    buyer: {name, surname, email, document, address},
-                    purchase: cart,
-                    total: sumTotal(),
-                    time: serverTimestamp()
-                }
-                const orderData = await addDoc(collection(db, 'orders'), order)
-                setOrderId(orderData.id)
-                clear()
-            } catch (error) {
+                  buyer: { name, surname, email, document, address },
+                  purchase: cart,
+                  total: sumTotal(),
+                  time: serverTimestamp(),
+                };
+                const orderData = await addDoc(collection(db, "orders"), order);
+                setOrderId(orderData.id);
+                clear();
+              } catch (error) {
                 console.log(error);
+              }
             }
-        }
-    }
-    if (orderId) {
-        return <h1>Muchas gracias por su compra, su orden es: {orderId}</h1>
-    }
+          }
+        };
 
     return (
         <>

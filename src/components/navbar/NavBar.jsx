@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, useNavigate } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch/useFetch';
 import { API_URLS } from '../../constants';
+import CartWidget from '../cartWidget/CartWidget';
 
 function NavBar(props) {
 
@@ -21,12 +22,16 @@ function NavBar(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to={`/cart`}>Carrito</Nav.Link>
             <Nav.Link href="#link">Acerca de</Nav.Link>
             <NavDropdown title="Categorías" id="categories">
-              {categories.map((category) => <Nav.Link as={Link} key={category} to={`/category/${category}`}>{category}</Nav.Link>)}
+              <Nav.Link as={Link} to={`/category/Movies`}>Movies</Nav.Link>
+              <Nav.Link as={Link} to={`/category/Electronics`}>Electronics</Nav.Link>
+              <Nav.Link as={Link} to={`/category/Shoes`}>Shoes</Nav.Link>
+              <Nav.Link as={Link} to={`/category/Garden`}>Garden</Nav.Link>
+              <Nav.Link as={Link} to={`/category/Outdoors`}>Outdoors</Nav.Link>
             </NavDropdown>
           </Nav>
+          <CartWidget />
         </Navbar.Collapse>
       </Container>
     </Navbar>

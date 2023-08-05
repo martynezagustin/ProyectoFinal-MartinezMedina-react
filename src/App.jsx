@@ -14,7 +14,7 @@ function App() {
   return (
     <CartContextProvider>
       <BrowserRouter>
-        <NavBar onFilter/>
+        <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer />}></Route>
           <Route path='/products/:productId' element={<ItemDetailContainer />}/>  
